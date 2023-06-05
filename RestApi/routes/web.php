@@ -14,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    // dd("hello");
-    // // return view('welcome');
+    $arr=[1,4,3,446,87];
+   $len=count($arr); //6
+  $largest=$arr[0]; //1
+  for($i=1;$i<$len;$i++)
+  {
+    if($arr[$i]>$largest)
+    {
+        $largest=$arr[$i];
+    }
+   
+  }
+  print_r($largest);
+    // return view('welcome');
 });
