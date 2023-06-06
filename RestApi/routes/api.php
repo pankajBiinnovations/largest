@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\controllers\CustomController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::post('registration',[CustomController::class,'registration']);
+Route::post('login',[CustomController::class,'login']);
+Route::get('event',[EventController::class,'index']);
