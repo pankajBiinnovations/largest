@@ -10,7 +10,7 @@ class EventController extends Controller
 {
     public function index()
     {
-        Event::dispatch(new SendMail(1,2));
+        Event::dispatch(new SendMail(1));
     }
     //
 }
